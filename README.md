@@ -1,3 +1,3 @@
-##Cronometer Wizard
+#Cronometer Wizard
 
-Asistant for help on the calculation nedeed to get the exact amount of diferent products that are use as input in Cronometer app.
+Rebuild of cronometer's home page with the addition of a wizard to aid in the calculation necessary to obtain the exact number of different products used as input in the Cronometer app.
