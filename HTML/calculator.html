@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
     <link href="/home/celina/Documentos/Nahuel/Programación/Proyectos/Cronometer wizard/styles/styles.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -32,7 +33,33 @@
             </nav>
         </div>
     </div>
+    <div class="wizard">
+        <h1>
+            Cronometer wizard
+        </h1>
+        <p>
+            All that you need in one place, just fill the form and obtein the weight of each ingredient in your plate
+        </p>
+        <form onsubmit="return false"> 
+            <h2>
+                Weight calculator
+            </h2>
+            <label class="formulario_label">How many ingredients have your meal?</label><br>
+            <input type="number" value id="products" name="products" class="formulario_input"><br><br>
+
+            <button type="button" onclick="addNameFields()">Enter ingredients</button>
+            <div class="form_container" id="container_name"></div>
+            <button type="button" onclick = "storeNameData()">Ready</button><br>
+
+            <button type="button" onclick = "addNumFields()">Enter weights (g)</button>
+            <div class="form_container" id="container_num"></div>
+            <button type="button" onclick = "storeNumData()">Ready</button><br>
+
+            <button type="button" onclick = "showData()">Show</button><br>
+        </form>
+    </div>
 </body>
+<script src="/home/celina/Documentos/Nahuel/Programación/Proyectos/Cronometer wizard/app/app.js"></script>
 <footer class="footer">
     <p>
         &copy; Nahuel Bustos
