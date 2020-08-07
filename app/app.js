@@ -131,8 +131,8 @@ function showData() {
     let names = storeNameData();
     let weights = calcIngredientWeight();
 
-    let container = document.getElementById("results");
-    container.appendChild(document.createTextNode("You had consume"));
+    let container = document.getElementById("resultado");
+    container.appendChild(document.createTextNode("You ate"));
     container.appendChild(document.createElement("br"));
 
     for (i=0;i<products;i++){
