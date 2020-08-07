@@ -1,7 +1,12 @@
-let products = document.getElementById("products").value;
+
+function storeProducts() {
+    let products = document.getElementById("products").value;
+    return products;
+}
 
 function addNameFields() {
     
+    let products = storeProducts();
     let container = document.getElementById("container_name");
 
     for (i=0;i<products;i++){
@@ -20,6 +25,7 @@ function addNameFields() {
 
 function addNumFields() {
     
+    let products = storeProducts();
     let container = document.getElementById("container_num");
 
     for (i=0;i<products;i++){
@@ -38,6 +44,7 @@ function addNumFields() {
 
 function storeNameData() {
 
+    let products = storeProducts();
     let name = [];
 
     for (i=0;i<products;i++){
@@ -48,6 +55,7 @@ function storeNameData() {
 
 function storeNumData() {
 
+    let products = storeProducts();
     let weight = [];
 
     for (i=0;i<products;i++){
@@ -58,6 +66,7 @@ function storeNumData() {
 
 function calcTotal() {
     
+    let products = storeProducts();
     let sum = 0;
     let weight = [];
     weight = storeNumData();
@@ -70,6 +79,7 @@ function calcTotal() {
 
 function percentaje() {
     
+    let products = storeProducts();
     let percen = [];
     let weight = [];
     weight = storeNumData();
@@ -81,14 +91,60 @@ function percentaje() {
     return percen;
 }
 
+function inputTotalWeight() {
+
+    let container = document.getElementById("plateWeight");
+
+    container.appendChild(document.createTextNode("How much does your plate weigh?"));
+    container.appendChild(document.createElement("br"));
+    // Create an <input> element, set its type and name attributes
+    let input = document.createElement("input");
+    input.type = "number";
+    input.name = "totalWeight";
+    input.id = "totalWeight";
+    container.appendChild(input);
+}
+
+function calcIngredientWeight() {
+
+    let products = storeProducts();
+    let plateWeight = document.getElementById("totalWeight").value;
+    let percen = [];
+    percen = percentaje();
+    let weight = [];
+    weight = storeNumData();
+    let ingredientWeight = [];
+
+    for (i=0;i<products;i++){
+        ingredientWeight[i] = (percen[i] * plateWeight) / 100;    
+    }
+    return ingredientWeight;
+}
+
+function showForm() {
+    document.getElementById("cover").style.zIndex = -20;
+}
+
 function showData() {
 
+    let products = storeProducts();
     let names = storeNameData();
+    let weights = calcIngredientWeight();
 
-    alert(names);
-    alert(storeNumData());
-    alert(calcTotal());
-    alert(percentaje());
+    let container = document.getElementById("results");
+    container.appendChild(document.createTextNode("You had consume"));
+    container.appendChild(document.createElement("br"));
+
+    for (i=0;i<products;i++){
+        resultado.appendChild(document.createTextNode(""));
+        let div = document.createElement("div");
+        div.tagName = div
+        div.textContent = weights[i].toFixed(2) + ' grams of ' + names[i];
+        div.name = "result" + i;
+        div.id = "result" + i;
+        resultado.appendChild(div);
+        resultado.appendChild(document.createElement("br"));
+    }
 }
 
 

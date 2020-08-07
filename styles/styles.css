@@ -203,3 +203,120 @@ margin: 1em 5em 1em 5em;
 .footer img {
     max-width: 32px;
 }
+
+.wizard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.form1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(180deg, #ff9751, #ff763f);
+  color: #ffffff;
+  margin-bottom: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.cover {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: ghostwhite;
+  width: 100%;
+  font-size: 1.5em;
+  position: absolute;
+  min-height: 50%;
+}
+
+.form2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: ghostwhite;
+  margin-bottom: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  z-index: -10;
+}
+
+.formulario_label {
+  font-size: 1.2em;
+  margin: 2em;
+}
+
+.wizard input {
+  width: 50%;
+  padding: 1em 2em;
+ 
+  box-sizing: border-box;  
+}
+
+.button2 {
+  display: inline-block;
+  background-color: #5da151;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.5em;
+  width: 10em;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 1em;
+}
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button2:hover {
+  background-color: #ffffff;
+  color: #ff763f;
+}
+.button2:hover span {
+  padding-right: 25px;
+}
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(180deg, #ff9751, #ff763f);
+  color: #ffffff;
+  margin-bottom: 0px;
+  padding: 2em;
+  width: 100%;
+  font-size: 1.5em;
+}

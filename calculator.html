@@ -40,23 +40,40 @@
         <p>
             All that you need in one place, just fill the form and obtein the weight of each ingredient in your plate
         </p>
-        <form onsubmit="return false"> 
-            <h2>
-                Weight calculator
-            </h2>
-            <label class="formulario_label">How many ingredients have your meal?</label><br>
-            <input type="number" value id="products" name="products" class="formulario_input"><br><br>
+    </div>
+    <form class="form1"> 
 
-            <button type="button" onclick="addNameFields()">Enter ingredients</button>
-            <div class="form_container" id="container_name"></div>
-            <button type="button" onclick = "storeNameData()">Ready</button><br>
+        <label class="formulario_label">How many ingredients does your food have?</label><br><br>
+        <input type="number" value id="products" name="products"><br><br>
+        <button type="button" class="button2" onclick = "storeProducts(), showForm()">Enter value</button>
 
-            <button type="button" onclick = "addNumFields()">Enter weights (g)</button>
-            <div class="form_container" id="container_num"></div>
-            <button type="button" onclick = "storeNumData()">Ready</button><br>
+    </form>
 
-            <button type="button" onclick = "showData()">Show</button><br>
-        </form>
+    <div class="cover" id="cover"></div>
+
+    <form class="form2"> 
+
+        <button type="button" class="button2" onclick="addNameFields()">Enter ingredients</button>
+        <div class="form_container" id="container_name"></div>
+
+        <button type="button" class="button2" onclick = "addNumFields()">Enter weights in grames</button>
+        <div class="form_container" id="container_num"></div>
+
+        <button type="button" class="button2" onclick = "storeNameData(), storeNumData(), inputTotalWeight()">Ready</button><br><br>
+
+        <div id="plateWeight"></div>
+
+        <button type="button" class="button2" onclick = "showData()">Show results</button><br>
+
+        <div id="results"></div>
+
+        <div class="results" id="resultado"></div>
+
+    </form>
+    <div>
+        <br>
+        <hr>
+        <br>
     </div>
 </body>
 
